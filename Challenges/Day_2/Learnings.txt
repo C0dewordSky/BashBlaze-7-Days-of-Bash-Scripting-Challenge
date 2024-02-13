@@ -1,0 +1,9 @@
+1. Indentation is very important. Leave spaces after every part of the command
+for eg: 
+ for [ -z "$input ]; then
+
+ 2. wc -l : for number of lines
+ wc -m : for total characters input
+
+ 3. ls -lh : it displays complete information of directories and files in a folder 
+    including its size. 
