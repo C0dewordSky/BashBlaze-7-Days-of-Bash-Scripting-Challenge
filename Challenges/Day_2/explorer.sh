@@ -1,23 +1,24 @@
+
 #!/bin/bash
 
 # Part 1: File and Directory Exploration
-echo "Welcome to the Interactive File and Directory Explorer!"
 
-while true; do
-    # List all files and directories in the current path
-    echo "Files and Directories in the Current Path:"
-    ls -lh
+echo "Welcome. The Direories and files in theis folder are"
 
-    # Part 2: Character Counting
-    read -p "Enter a line of text (Press Enter without text to exit): " input
+ls -hsa 
 
-    # Exit if the user enters an empty string
-    if [ -z "$input" ]; then
-        echo "Exiting the Interactive Explorer. Goodbye!"
-        break
-    fi
+while true; do 
+#List all the directories and files in the folder
+  echo "Files adn Directories in the folder are: " 
+  ls -lh 
 
-    # Calculate and print the character count for the input line
-    char_count=$(echo -n "$input" | wc -m)
-    echo "Character Count: $char_count"
+read -p "Enter a line of text (Press Enter without text to exit): " input
+
+if [ -z "$input" ]; then
+   echo "Exiting the explorer"
+   break
+fi
+
+char_count=$(echo -n "$input" | wc -m )
+echo "Character Count: $char_count"
 done
